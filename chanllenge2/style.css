@@ -8,6 +8,12 @@ body {
     margin: auto;
     padding: 20px;
 }
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
 
 header button {
     background-color: red;
@@ -64,7 +70,8 @@ header button:hover {
   color: black;
   z-index: 2;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -74,8 +81,10 @@ header button:hover {
   transform: rotateY(180deg);
   z-index: 1;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  /* justify-content: center; */
   align-items: center;
+  padding: 20px;
 }
 h3 {
   font-size: 20px;
@@ -83,3 +92,28 @@ h3 {
   font-weight: bold;
   color: #fff;
 }
+.flip-card-front img {
+    width: 200px;
+    height: 200px;
+}
+
+.flip-card-front > span,
+.flip-card-back > ul {
+    text-align: left;
+    display: grid;
+    align-self: stretch;
+    margin-left: 20px;
+}
+
+.flip-card-back ul {
+    list-style-type: square;
+    display: grid;
+    gap: 10px;
+    padding-top: 20px;  
+}
+
+.flip-card-back li {
+    display: flex;
+    gap: 5px;
+}
+
